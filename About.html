@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pictopedia</title>
+  <link rel="stylesheet" href="stylebg.css">
+</head>
+<body>
+  <nav>
+    <label class="logo">PICTOPEDIA</label> 
+      <ul >
+        <li style="color: rgb(12, 14, 13);"><a href="./home.html">HOME</a></li>
+        <li><a href="./Library.html">LIBRARY</a></li>
+        <li><a href="./Contribute.html">CONTRIBUTE</a></li>
+        <li><a href="./About.html">ABOUT</a></li>
+        <li><a href="./logout.php">LOGOUT</a></li>
+      </ul>
+  </nav>
+
+  <!--Subscription part-->
+  <div class="hero">
+    
+    <h2> The heart of Pictopedia is its collection of images, icons, and illustrations that are used to represent different concepts and ideas.
+      <br></br> These visuals are carefully chosen and designed to be both accurate and engaging, making it easier for users to understand and remember the information presented.</h2>
+    
+    <h2> For more<strong>Awesome</strong> pictures</h2>
+    <p> Subscribe our website!!</p>
+    <form name="submit-to-google-sheet">
+      <input type="email" name="Email" placeholder="Your email id" required>
+      <button type="submit"><img alt="icon" src="./arrow-icon-1167.png" width="30px"</button>
+    </form>
+    <span id="msg"></span>
+    
+  </div>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyp3CLfsJEzDWW8U-noyz3yWeXxd3bxVr8uovsuGTB_rHWkc6l580x5tqcxB0rAnYo/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML="Thank You for Subscribing!"
+          setTimeout(function(){
+            msg.innerHTML=""
+          },5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: montserrat;
+}
+
+nav{
+  background: #0a957b;
+  height:80px;
+  width : 100%;
+}
+
+label.logo{
+  color: rgb(112, 227, 212);;
+  font-size: 25px;
+  line-height: 80px;
+  padding: 0 20px;
+  font-weight: bold;
+  font-family:'noto Sans',sans-serif;  
+}
+
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px ;
+  margin: 0 5px ;
+}
+
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+nav{
+  background: rgb(15, 87, 150);;
+  height: 80px;
+}
+
+nav li a:hover{
+  color:rgb(14, 13, 14);
+  transition: all 0.4s ease 0s;
+}
+
+#logo {
+  text-decoration: none;
+  color: rgb(114, 18, 18);
+  text-align: center;  
+  padding-left:20px ;
+  float: left;
+  padding-top: 4px;
+}
+
+.search-form {
+  padding-top: 2%;
+  padding-right: 7.5%;
+  display: flex;
+  float: right;
+}
+
+.search-form input {
+  font-size: 2rem;
+  padding: 0.5rem;
+  width: 80%;
+  border: none;
+  border: 2px solid rgb(74, 68, 131); 
+}
+
+.search-form button {
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: rgb(74, 68, 131);
+  color: white;
+  cursor: pointer;
+}
+
+.gallery-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  padding: 1% 0rem;
+}
+
+.gallery-info a {
+  color: gray;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  padding: 2% 0rem;
+  width: 80%;
+  margin: auto;
+  row-gap: 0;
+  column-gap: 2%;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.nav-button {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more {
+  padding: 1rem 3rem;
+  background: rgb(74, 68, 131);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.ulid{
+  color: black;
+}
+
+.content{
+  width:1200px;
+  height:auto;
+  margin: auto;
+  color:rgb(34, 3, 18);
+  position: relative;
+}
